@@ -9,7 +9,56 @@
     x:Name="this"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <AbsoluteLayout
+        <AbsoluteLayout>
+            <StackLayout BackgroundColor="White">
+                <Grid>
+                    <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                        <Frame HeightRequest="1000" BackgroundColor="DeepSkyBlue" Padding="0" Margin="0">
+                            <Image Source="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Padding="1" Margin="10,150,10,0" HorizontalOptions="FillAndExpand">
+                        <Frame  BackgroundColor="Transparent" HeightRequest="350" HasShadow="True" Padding="0" Margin="0">
+                            <StackLayout>
+                                <StackLayout Margin="10">
+                                    <Label Text="Quản Lý Khách Hàng" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Italic, Bold" FontSize="Body"/>
+                                </StackLayout>
+                                <StackLayout Padding="0" Margin="15,10">
+                                    <!--Tài Khoản-->
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                                <Image Source="icon_avatar.png" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+                                            <Entry Keyboard="Email" ReturnType="Next" Placeholder="Tài khoản" PlaceholderColor="LightGray" Text="{Binding Username}" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <!--Mật Khẩu-->
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                                <Image Source="icon_lock" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+                                            <Entry x:Name="PasswordEntry" ReturnCommand="{Binding LoginCommand}" ReturnType="Done" Placeholder="Mật khẩu" PlaceholderColor="LightGray" IsPassword="True" Text="{Binding Password}" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <Button Text="ĐĂNG NHẬP" Padding="0" Margin="15,5,15,0" FontAttributes="Bold" BackgroundColor="DeepSkyBlue" Command="{Binding LoginCommand}" TextColor="White" CornerRadius="30"/>
+                                <Label x:Name="ValidationError" Margin="0,10,0,0" HorizontalOptions="Center" Text="{Binding ValidationError}" TextColor="Red" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <popup:LoadingScreenDimmed
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding BindingContext.IsBusy, Source={x:Reference this}}" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
+<!--<AbsoluteLayout
             BackgroundColor="{StaticResource colorPrimary}"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
@@ -18,10 +67,10 @@
                 AbsoluteLayout.LayoutFlags="All"
                 VerticalOptions="CenterAndExpand">
                 <Label
-                    FontAttributes="Bold"
-                    FontSize="32"
+                    FontAttributes="Bold,Italic"
+                    FontSize="Title"
                     HorizontalOptions="Center"
-                    Text="Login"
+                    Text="Quản lý khách hàng"
                     TextColor="White" />
                 <c:RoundedEntry
                     Margin="20,20,20,0"
@@ -44,19 +93,19 @@
                     Margin="20,8,20,0"
                     BackgroundColor="{StaticResource colorAccent}"
                     Command="{Binding LoginCommand}"
-                    CornerRadius="5"
+                    CornerRadius="10"
                     FontAttributes="Bold"
                     FontSize="18"
                     HorizontalOptions="FillAndExpand"
                     Text="{ex:Translate Key=button_login}"
                     TextColor="White" />
-                <!--<c:ClickableText
+                <c:ClickableText
                     Margin="0,10,0,0"
                     Command="{Binding ForgotPasswordCommand}"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
                     Text="{ex:Translate Key=clickable_forgot_password}"
-                    TextColor="{StaticResource colorAccent}" />-->
+                    TextColor="{StaticResource colorAccent}" />
                 <Label
                     x:Name="ValidationError"
                     Margin="0,10,0,0"
@@ -64,18 +113,16 @@
                     Text="{Binding ValidationError}"
                     TextColor="Red" />
             </StackLayout>
-            <!--<c:ClickableText
+            <c:ClickableText
                 AbsoluteLayout.LayoutBounds="0.5, 0.95, 120, 60"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 Command="{Binding ScanLoginCommand}"
                 FontAttributes="Bold"
                 FontSize="Medium"
                 Text="{ex:Translate Key=clickable_scan_to_login}"
-                TextColor="{StaticResource colorAccent}" />-->
+                TextColor="{StaticResource colorAccent}" />
             <popup:LoadingScreenDimmed
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
                 IsVisible="{Binding BindingContext.IsBusy, Source={x:Reference this}}" />
-        </AbsoluteLayout>
-    </ContentPage.Content>
-</ContentPage>
+        </AbsoluteLayout> -->
