@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODAMobile.Views.HomePage" Title="Home">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding LogOutCommand}"
+            Icon="ic_logout_white.png"
+            Order="Primary"
+            Text="Log Out" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
+
+            <Frame BackgroundColor="White" HeightRequest="100" HasShadow="True" Padding="0" Margin="0" BorderColor="LightGray" CornerRadius="5">
+                <Grid Margin="15" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Kỳ cước: " TextColor="Black" Grid.Row="0" FontAttributes="Bold" FontSize="12"/>
+                    <Label Text="03/2020" TextColor="Black" Grid.Row="0" Grid.Column="1" FontSize="12"/>
+
+                    <Label Text="Khách hàng đã thu: " TextColor="Black" Grid.Row="1" FontAttributes="Bold" FontSize="12"/>
+                    <Label Text="38/1827" TextColor="Black" Grid.Row="1" Grid.Column="1" FontSize="12"/>
+
+                    <Label Text="Tiền đã thu: " TextColor="Black" Grid.Row="2" FontAttributes="Bold" FontSize="12"/>
+                    <Label Text="5,000,000 VNĐ" TextColor="Black" Grid.Row="2" Grid.Column="1" FontSize="12"/>
+
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="White" HeightRequest="150" HasShadow="True" Padding="0" Margin="0" BorderColor="LightGray" CornerRadius="5">
+                    
+            </Frame>
+
+            <Frame BackgroundColor="White" HeightRequest="150" HasShadow="True" Padding="0" Margin="0" BorderColor="LightGray" CornerRadius="5">
+
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

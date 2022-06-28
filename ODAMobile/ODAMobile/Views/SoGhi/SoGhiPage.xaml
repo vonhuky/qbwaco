@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Xamarin.Forms.Converters"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Controls"
+             xmlns:popup="clr-namespace:ODAMobile.Views.Popup"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+             x:Name="this"
+             BackgroundColor="LightBlue"
+             x:Class="ODAMobile.Views.SoGhi.SoGhiPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ReverseBoolConverter x:Key="ReverseBoolConverter" />
+            <converters:ChiSoToIntConverter x:Key="ChiSoToIntConverter" />
+            <converters:ChiSoToTextConverter x:Key="ChiSoToTextConverter" />
+            <converters:ChiSoToColorConverter x:Key="ChiSoToColorConverter" />
+            <converters:ChiSoToBoolConverter x:Key="ChiSoToBoolConverter" />
+            <converters:ChiSoToText1Converter x:Key="ChiSoToText1Converter" />
+            <converters:ChiSoToColor1Converter x:Key="ChiSoToColor1Converter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <StackLayout
+                IsVisible="{Binding IsSearching, Converter={StaticResource ReverseBoolConverter}}"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding StartSearchSoGhiCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding TitleSoGhi}"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+                <Image
+                    Margin="0,0,20,0"
+                    HeightRequest="25"
+                    HorizontalOptions="End"
+                    Source="ic_search_white.png"
+                    VerticalOptions="Center"
+                    WidthRequest="25" />
+            </StackLayout>
+            <StackLayout
+                IsVisible="{Binding IsSearching}"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <controls:RoundedSearchBar
+                    BackgroundColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    InputTransparent="{Binding IsBusy}"
+                    MinimumWidthRequest="50"
+                    Placeholder="Tìm kiếm..."
+                    Text="{Binding SearchKey}"
+                    VerticalOptions="Center" />
+                <Label
+                    FontSize="16"
+                    HorizontalOptions="End"
+                    HorizontalTextAlignment="Center"
+                    Text="Hủy"
+                    TextColor="White"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="80">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding StopSearchSoGhiCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ScrollView HeightRequest="700"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        Orientation="Vertical"
+                        VerticalScrollBarVisibility="Never">
+                <ListView
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="False"
+                    ItemsSource="{Binding Items}"
+                    RefreshCommand="{Binding RefeshCommand}"
+                    RowHeight="165"
+                    SelectionMode="None"
+                    SeparatorVisibility="None">
+                    <!-- the behavior that will enable infinite scrolling -->
+                    <ListView.Behaviors>
+                        <scroll:InfiniteScrollBehavior IsLoadingMore="{Binding IsWorking}" />
+                    </ListView.Behaviors>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,2,0,0" Padding="5" BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="{Binding HoTen}" TextColor="Accent"></Label>
+                                    <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                        <Label Text="Mã hợp đồng: " XAlign="Start"></Label>
+                                        <Label Text="{Binding MaHopDong}"></Label>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="2" Orientation="Horizontal">
+                                        <Label Text="Địa chỉ: "></Label>
+                                        <Label Text="{Binding DiaChi}"></Label>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="3">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50*" />
+                                                <ColumnDefinition Width="50*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                                <Label Text="Chỉ số kỳ trước: "></Label>
+                                                <Label Text="{Binding ChiSoKyTruoc}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="1" Orientation="Horizontal">
+                                                <Label Text="Chỉ số ghi được: "></Label>
+                                                <Label Text="{Binding ChiSoGhiDuoc, Converter={StaticResource ChiSoToIntConverter}}"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="4">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="60*" />
+                                                <ColumnDefinition Width="40*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                                <Label Text="Trạng thái: "></Label>
+                                                <Label FontAttributes="Bold" TextColor="{Binding ChiSoGhiDuoc, Converter={StaticResource ChiSoToColorConverter}}" Text="{Binding ChiSoGhiDuoc, Converter={StaticResource ChiSoToTextConverter}}"></Label>
+                                            </StackLayout>
+                                            <Button Grid.Column="1" TextColor="White" HeightRequest="40" BorderRadius="10" BackgroundColor="{Binding ChiSoGhiDuoc, Converter={StaticResource ChiSoToColor1Converter}}" 
+                                                    Text="{Binding ChiSoGhiDuoc, Converter={StaticResource ChiSoToText1Converter}}" 
+                                                    Command="{Binding BindingContext.GhiChiSoCommand, Source={x:Reference this}}" 
+                                                    CommandParameter="{Binding .}"></Button>
+                                        </Grid>
+                                        
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <!-- the "loading..." view -->
+                    <ListView.Footer>
+                        <Grid Padding="6" IsVisible="{Binding IsWorking}">
+                            <!-- set the footer to have a zero height when invisible -->
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsVisible" Value="False">
+                                    <Setter Property="HeightRequest" Value="0" />
+                                </Trigger>
+                            </Grid.Triggers>
+                            <!-- the loading content -->
+                            <Label Text="Loading..." VerticalOptions="Center" HorizontalOptions="Center" />
+                        </Grid>
+                    </ListView.Footer>
+
+                </ListView>
+            </ScrollView>
+            <popup:LoadingScreenDimmed
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        IsVisible="{Binding IsBusy}" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

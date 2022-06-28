@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODAMobile.Views.Contract.ContractPage"
+             xmlns:popup="clr-namespace:ODAMobile.Views.Popup"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Controls"
+             xmlns:converters="clr-namespace:Xamarin.Forms.Converters"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+             x:Name="this"
+             BackgroundColor="LightBlue"
+             Title="Danh sách hợp đồng">
+    <ContentPage.Resources>
+      <ResourceDictionary>
+            <converters:ReverseBoolConverter x:Key="ReverseBoolConverter" />
+            <converters:IntToStringConverter x:Key="IntToStringConverter" />
+            <converters:IntToBooleanConverter x:Key="IntToBooleanConverter" />
+            <converters:IntToColorConverter x:Key="IntToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <StackLayout
+                IsVisible="{Binding IsSearching, Converter={StaticResource ReverseBoolConverter}}"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding StartSearchContractCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Danh sách hợp đồng"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+                <Image
+                    Margin="0,0,20,0"
+                    HeightRequest="25"
+                    HorizontalOptions="End"
+                    Source="ic_search_white.png"
+                    VerticalOptions="Center"
+                    WidthRequest="25" />
+            </StackLayout>
+            <StackLayout
+                IsVisible="{Binding IsSearching}"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <controls:RoundedSearchBar
+                    BackgroundColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    InputTransparent="{Binding IsBusy}"
+                    MinimumWidthRequest="50"
+                    Placeholder="Tìm kiếm"
+                    Text="{Binding SearchKey}"
+                    VerticalOptions="Center" />
+                <Label
+                    FontSize="16"
+                    HorizontalOptions="End"
+                    HorizontalTextAlignment="Center"
+                    Text="Hủy"
+                    TextColor="White"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="80">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding StopSearchContractCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ScrollView HeightRequest="700"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        Orientation="Vertical"
+                        VerticalScrollBarVisibility="Never">
+                <ListView
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="False"
+                    ItemsSource="{Binding Items}"
+                    RefreshCommand="{Binding RefeshCommand}"
+                    RowHeight="150"
+                    SelectionMode="None"
+                    SeparatorVisibility="None">
+                    <!-- the behavior that will enable infinite scrolling -->
+                    <ListView.Behaviors>
+                        <scroll:InfiniteScrollBehavior IsLoadingMore="{Binding IsWorking}" />
+                    </ListView.Behaviors>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="5" BackgroundColor="White">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60*" />
+                                        <ColumnDefinition Width="40*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <StackLayout Margin="10" Grid.Column="0" Orientation="Vertical">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto" />
+                                                <RowDefinition Height="auto" />
+                                                <RowDefinition Height="auto" />
+                                                <RowDefinition Height="auto" />
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Row="0" Text="{Binding ten_kh}" TextColor="Accent"></Label>
+                                            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                                <Label Text="Tiền cần thu: " XAlign="Start"></Label>
+                                                <Label Text="{Binding phat_sinh}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="2" Orientation="Horizontal">
+                                                <Label Text="Địa chỉ: "></Label>
+                                                <Label Text="{Binding diachi_kh}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="3" Orientation="Horizontal">
+                                                <Label Text="Trạng thái: "></Label>
+                                                <Label FontAttributes="Bold" TextColor="{Binding status, Converter={StaticResource IntToColorConverter}}" Text="{Binding status, Converter={StaticResource IntToStringConverter}}"></Label>
+                                            </StackLayout>
+                                        </Grid>
+
+                                    </StackLayout>
+                                    <StackLayout Margin="0,20,5,20" Grid.Column="1" Orientation="Vertical">
+                                        <Button Text="Gạch nợ" BackgroundColor="Green" CornerRadius="10" IsVisible="{Binding status, Converter={StaticResource IntToBooleanConverter}}" TextColor="White" Command="{Binding BindingContext.GachNoCommand, Source={x:Reference this}}"
+                                                            CommandParameter="{Binding .}"></Button>
+                                        <Button Text="In hóa đơn" BackgroundColor="Green" CornerRadius="10" TextColor="White" Command="{Binding BindingContext.PrintCommand, Source={x:Reference this}}" CommandParameter="{Binding .}"></Button>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                    <!-- the "loading..." view -->
+                    <ListView.Footer>
+                        <Grid Padding="6" IsVisible="{Binding IsWorking}">
+                            <!-- set the footer to have a zero height when invisible -->
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsVisible" Value="False">
+                                    <Setter Property="HeightRequest" Value="0" />
+                                </Trigger>
+                            </Grid.Triggers>
+                            <!-- the loading content -->
+                            <Label Text="Loading..." VerticalOptions="Center" HorizontalOptions="Center" />
+                        </Grid>
+                    </ListView.Footer>
+
+                </ListView>
+            </ScrollView>
+            <popup:LoadingScreen
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        IsVisible="{Binding IsBusy}" />
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

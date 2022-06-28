@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\App.xaml</FilePath>
+      <Hash>02-DE-55-9D-1A-A2-13-E4-1D-B5-4A-05-09-B9-11-32</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Navigation\MainPage.xaml</FilePath>
+      <Hash>7C-96-2C-BA-E1-1F-49-CA-B6-9C-6D-3D-E8-DC-D8-5F</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Navigation\MenuPage.xaml</FilePath>
+      <Hash>DF-E3-6E-4B-52-92-21-8A-B8-60-77-A7-18-9D-6D-64</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\Contract\CentralPage.xaml</FilePath>
+      <Hash>A7-F6-A0-D1-21-1F-64-24-D6-E0-FB-D6-9B-3B-0D-C5</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\Contract\ContractPage.xaml</FilePath>
+      <Hash>EE-9F-DA-2A-3B-AB-94-9E-52-48-45-C7-4E-90-E7-72</Hash>
+      <Properties>
+        <string>BackgroundColor</string>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\HomePage.xaml</FilePath>
+      <Hash>D7-B6-DE-90-24-5D-54-85-3F-A0-BB-DD-5F-FA-CD-86</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\Login\LoginPage.xaml</FilePath>
+      <Hash>80-A9-E5-9C-1A-EF-E3-43-A1-4C-5C-EC-F5-DE-24-E9</Hash>
+      <Properties>
+        <string>NavigationPage.HasNavigationBar</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\PopUp\KyCuocSelector.xaml</FilePath>
+      <Hash>78-0C-F3-F0-28-04-4D-5C-BF-F7-6D-96-E8-CA-A2-0E</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\PopUp\LoadingScreen.xaml</FilePath>
+      <Hash>4E-B3-32-FC-FE-1F-B5-08-E6-58-70-BC-17-D7-00-F1</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\PopUp\LoadingScreenDimmed.xaml</FilePath>
+      <Hash>C2-1F-E7-E6-C2-8A-F7-D0-62-40-2A-C0-A7-12-FC-FE</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\PopUp\PopUpGhiChiSo.xaml</FilePath>
+      <Hash>F3-14-33-14-29-2E-0A-32-30-1C-40-23-E9-0F-6C-B9</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\PopUp\PopUpPrintPage.xaml</FilePath>
+      <Hash>B1-DB-2F-43-EF-4D-7E-9E-2C-7D-57-C5-FC-25-A9-E7</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\Settings\SettingsPage.xaml</FilePath>
+      <Hash>0B-D9-89-EC-92-CE-2E-A4-CD-EE-88-58-90-49-C2-CC</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\SoGhi\SoGhiPage.xaml</FilePath>
+      <Hash>F8-5E-35-CA-59-12-D9-0F-E1-B9-48-87-1D-76-2E-1D</Hash>
+      <Properties>
+        <string>BackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\CongViec\ODA\BanNangCap\ODAMobile\ODAMobile\ODAMobile\Views\Sync\SyncPage.xaml</FilePath>
+      <Hash>3D-6D-E2-71-58-35-3A-CB-66-F0-18-2A-28-F2-11-6D</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

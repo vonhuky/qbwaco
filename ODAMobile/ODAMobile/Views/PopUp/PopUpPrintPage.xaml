@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Controls"
+             xmlns:converters="clr-namespace:Xamarin.Forms.Converters"
+             x:Name="this"
+             x:Class="ODAMobile.Views.PopUp.PopUpPrintPage">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ContentView
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="Black"
+                Opacity="0.4" />
+        <Frame
+            Padding="0"
+            AbsoluteLayout.LayoutBounds=".5,.5,.95,.7"
+            AbsoluteLayout.LayoutFlags="All"
+            CornerRadius="5">
+            <StackLayout Spacing="5">
+                <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        HeightRequest="45"
+                        HorizontalOptions="Center"
+                        Text="In giấy báo"
+                        TextColor="{StaticResource colorAccent}"
+                        VerticalOptions="Start"
+                        VerticalTextAlignment="Center" />
+                <controls:Separator BackgroundColor="LightGray" Orientation="Horizontal" />
+                <StackLayout 
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All" Spacing="0">
+                    <Grid Margin="5" Padding="5" RowSpacing="5" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Picker Grid.Row="0" ItemsSource="{Binding DeviceList}"
+                            Title="Select Device"
+                            ItemDisplayBinding="{Binding .}"
+                            SelectedItem="{Binding SelectedDevice}" />
+                        <Entry Grid.Row="1" Text="{Binding PrintMessage}"
+                           Placeholder="Message"/>
+                        <Button Grid.Row="2" Text="Print"
+                            Command="{Binding PrintCommand}"/>
+                    </Grid>
+                </StackLayout>
+                <controls:Separator BackgroundColor="LightGray" Orientation="Horizontal" />
+                <StackLayout Margin="10" Orientation="Horizontal">
+                    <Button x:Name="btnPrint"
+                            HeightRequest="40"
+                            CornerRadius="7"
+                            BackgroundColor="{StaticResource colorPrimary}"
+                            Text="Print"
+                            TextColor="White"
+                            Clicked="BtnPrint_Clicked" />
+                    <Button x:Name="btnClose"
+                            HeightRequest="40"
+                            CornerRadius="7"
+                            BackgroundColor="{StaticResource colorAccent}"
+                            Text="Đóng"
+                            TextColor="White"
+                            Clicked="BtnClose_Clicked" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>

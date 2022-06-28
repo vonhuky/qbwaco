@@ -1,0 +1,169 @@
+{
+  "version": 2,
+  "dgSpecHash": "I2b39dPaqISzKfGDD3EHjrcw7Mpj/KlOVnFmalvZ9undbg9eYwnImuWq86VUuDeVVSWsq6VZ3lm2zyN/MeeofQ==",
+  "success": true,
+  "projectFilePath": "C:\\CongViec\\ODA\\BanNangCap\\ODAMobile\\ODAMobile\\ODAMobile.iOS\\ODAMobile.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\carouselview.formsplugin\\5.2.0\\carouselview.formsplugin.5.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation\\8.3.0\\fluentvalidation.8.3.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\livexaml\\2.1.70\\livexaml.2.1.70.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microcharts\\0.9.5.9\\microcharts.0.9.5.9.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite\\7.0.0-preview.4.22229.2\\microsoft.data.sqlite.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0-preview.4.22229.2\\microsoft.data.sqlite.core.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlite-net-pcl\\1.6.258-beta\\sqlite-net-pcl.1.6.258-beta.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepcl.raw\\0.9.4-pre1\\sqlitepcl.raw.0.9.4-pre1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.8-pre20220111224339\\sqlitepclraw.bundle_e_sqlite3.2.0.8-pre20220111224339.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.bundle_sqlcipher\\1.1.14\\sqlitepclraw.bundle_sqlcipher.1.1.14.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.core\\2.1.0\\sqlitepclraw.core.2.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.ios\\2.0.8-pre20220111224339\\sqlitepclraw.lib.e_sqlite3.ios.2.0.8-pre20220111224339.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.lib.sqlcipher.ios_unified.static\\1.1.14\\sqlitepclraw.lib.sqlcipher.ios_unified.static.1.1.14.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.provider.internal\\2.0.8-pre20220111224339\\sqlitepclraw.provider.internal.2.0.8-pre20220111224339.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.provider.internal.ios_unified\\1.1.14\\sqlitepclraw.provider.internal.ios_unified.1.1.14.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.provider.sqlite3.ios_unified\\1.1.13\\sqlitepclraw.provider.sqlite3.ios_unified.1.1.13.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\webp.touch\\1.0.8\\webp.touch.1.0.8.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xam.plugin.connectivity\\4.0.0.190-beta\\xam.plugin.connectivity.4.0.0.190-beta.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xam.plugins.settings\\4.1.0-beta\\xam.plugins.settings.4.1.0-beta.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.ffimageloading\\2.4.9.961\\xamarin.ffimageloading.2.4.9.961.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.9.961\\xamarin.ffimageloading.forms.2.4.9.961.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.ffimageloading.transformations\\2.4.9.961\\xamarin.ffimageloading.transformations.2.4.9.961.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.forms\\5.0.0.2401\\xamarin.forms.5.0.0.2401.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.forms.extended.infinitescrolling\\1.0.0-preview2\\xamarin.forms.extended.infinitescrolling.1.0.0-preview2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.forms.tinymvvm\\1.1.2\\xamarin.forms.tinymvvm.1.1.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.simpleping\\1.4.0\\xamarin.simpleping.1.4.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: LiveXAML from 2.1.73 to 2.1.70. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> LiveXAML (>= 2.1.73) \r\n ODAMobile.iOS -> LiveXAML (>= 2.1.70)",
+      "libraryId": "LiveXAML",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: ZXing.Net.Mobile.Forms from 3.1.0-beta2 to 2.4.1. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> ZXing.Net.Mobile.Forms (>= 3.1.0-beta2) \r\n ODAMobile.iOS -> ZXing.Net.Mobile.Forms (>= 2.4.1)",
+      "libraryId": "ZXing.Net.Mobile.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xam.Plugins.Forms.ImageCircle from 3.1.1.1-beta to 3.0.0.5. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> Xam.Plugins.Forms.ImageCircle (>= 3.1.1.1-beta) \r\n ODAMobile.iOS -> Xam.Plugins.Forms.ImageCircle (>= 3.0.0.5)",
+      "libraryId": "Xam.Plugins.Forms.ImageCircle",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Newtonsoft.Json from 13.0.2-beta1 to 12.0.1. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> Newtonsoft.Json (>= 13.0.2-beta1) \r\n ODAMobile.iOS -> Newtonsoft.Json (>= 12.0.1)",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: sqlite-net-pcl from 1.8.116 to 1.6.258-beta. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> sqlite-net-pcl (>= 1.8.116) \r\n ODAMobile.iOS -> sqlite-net-pcl (>= 1.6.258-beta)",
+      "libraryId": "sqlite-net-pcl",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: FluentValidation from 11.0.1 to 8.3.0. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> FluentValidation (>= 11.0.1) \r\n ODAMobile.iOS -> FluentValidation (>= 8.3.0)",
+      "libraryId": "FluentValidation",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.FFImageLoading.Transformations from 2.4.11.982 to 2.4.9.961. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> Xamarin.FFImageLoading.Transformations (>= 2.4.11.982) \r\n ODAMobile.iOS -> Xamarin.FFImageLoading.Transformations (>= 2.4.9.961)",
+      "libraryId": "Xamarin.FFImageLoading.Transformations",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.FFImageLoading.Forms from 2.4.11.982 to 2.4.9.961. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> Xamarin.FFImageLoading.Forms (>= 2.4.11.982) \r\n ODAMobile.iOS -> Xamarin.FFImageLoading.Forms (>= 2.4.9.961)",
+      "libraryId": "Xamarin.FFImageLoading.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: CarouselView.FormsPlugin from 6.0.0 to 5.2.0. Reference the package directly from the project to select a different version. \r\n ODAMobile.iOS -> ODAMobile -> CarouselView.FormsPlugin (>= 6.0.0) \r\n ODAMobile.iOS -> CarouselView.FormsPlugin (>= 5.2.0)",
+      "libraryId": "CarouselView.FormsPlugin",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

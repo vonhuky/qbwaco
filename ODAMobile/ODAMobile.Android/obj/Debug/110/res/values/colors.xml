@@ -1,0 +1,3 @@
+<resources><!-- PRIMARY --><color name="colorPrimary">#3F51B5</color><color name="colorPrimaryDark">#303F9F</color><color name="colorAccent">#FF4081</color><!--<color name="colorPrimary">#835e7e</color>
+    <color name="colorPrimaryDark">#6d4769</color>
+    <color name="colorAccent">#6bc5a9</color>--><color name="colorAccentDark">#3eb993</color><color name="colorGray">#999999</color><!-- NATIVE --><color name="white">#ffffff</color><color name="fab_material_blue_500">#5677fc</color></resources>
